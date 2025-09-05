@@ -38,3 +38,30 @@ int main() {
 
     return 0;
 }
+
+
+
+
+
+// prime_number.c //
+#include <stdio.h>
+
+int isPrime(int num) {
+    if (num <= 1) return 0;
+    for (int i = 2; i * i <= num; i++) {
+        if (num % i == 0)
+            return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int num = 29;
+
+    if (isPrime(num))
+        printf("%d is a Prime Number\n", num);
+    else
+        printf("%d is not a Prime Number\n", num);
+
+    return 0;
+}
